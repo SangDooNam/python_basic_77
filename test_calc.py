@@ -6,6 +6,7 @@ input_values_2 = "a + b"
 input_values_3 = "2 # 2"
 
 class TestCalcSolution(unittest.TestCase):
+    
     def test_calculator_1(self):
         with self.assertRaises(MathematicalError) as context:
             parse_input(input_values_1)
@@ -30,3 +31,6 @@ class TestCalcSolution(unittest.TestCase):
             'Invalid operator. Can only use "+" or "-"'
         )
 
+
+if __name__ == '__main__':
+    unittest.main()
